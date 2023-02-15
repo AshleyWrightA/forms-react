@@ -5,6 +5,7 @@
 /* Typography */
 /* Animation */
 /* Misc */
+/* Vars */
 
 @font-face {
   font-family: "HVD-Bodedo";
@@ -13,7 +14,9 @@
 
 :root {
   font-size: 62.5%;
-  height: 100vh;
+
+  --dream-horizen: rgb(212, 173, 41);
+  --background: rgb(255, 249, 196);
 }
 
 body {
@@ -34,6 +37,7 @@ h1 {
   font-size: 4.8rem;
 }
 
+/*  ReactDOM Root */
 #root {
   display: flex;
 }

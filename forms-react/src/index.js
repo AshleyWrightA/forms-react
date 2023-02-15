@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./css/meyer-reset.css";
 import "./css/index.css";
 import "./css/splash.css";
+import "./css/content.css";
 import Splash from "./app/components/splash";
 import Content from "./app/components/forms";
 
