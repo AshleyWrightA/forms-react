@@ -10,6 +10,7 @@ export default function Content() {
           pellentesque tincidunt mauris, ut imperdiet velit pellentesque molestie. Suspendisse
           volutpat elit auctor dapibus pharetra. Morbi tempus non urna sit amet commodo.
         </p>
+        <h2>Draw the Cards.</h2>
       </div>
       <Form />
       <Account />
@@ -24,18 +25,17 @@ function Form() {
 
   return (
     <div className="container">
-      <h2>Draw the Cards.</h2>
-      <fieldset>
-        {formArray}
+      <form className="form">
+        <fieldset className="form__fieldset">{formArray}</fieldset>
         <input type="submit" value="Submit" />
-      </fieldset>
+      </form>
     </div>
   );
 }
 
 function Field(props) {
   return (
-    <label htmlFor={props.id}>
+    <label className="form__field" htmlFor={props.id}>
       <p>{props.text}</p>
       <input type={props.type} id={props.id} required></input>
     </label>
@@ -44,10 +44,12 @@ function Field(props) {
 
 function Account() {
   return (
-    <div>
+    <div className="account">
       <button>Create Account</button>
-      <p>Already have an account?</p>
-      <a>Log In</a>
+      <div className="account__anchor">
+        <p>Already have an account?</p>
+        <a>Log In</a>
+      </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@
 :root {
   font-size: 62.5%;
 
-  --dream-horizen: rgb(212, 173, 41);
+  --dream-horizen: rgb(233, 188, 64);
   --background: rgb(255, 249, 196);
 }
 
@@ -34,7 +34,7 @@ code {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: calc(3.6rem + 1.2vw);
 }
 
 /*  ReactDOM Root */

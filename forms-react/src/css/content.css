@@ -8,17 +8,52 @@
 }
 
 .content__text {
-  padding: 10rem;
+  padding-block: 5rem;
+  padding-inline: 8vw 2vw;
 }
 
 .container {
-  padding: 10rem 10rem;
+  padding-block: 5rem;
+  padding-inline: 8vw 2vw;
 
-  width: 55vw;
-
-  display: flex;
-  flex-wrap: wrap;
+  width: 60vw;
 
   background-color: var(--dream-horizen);
   box-shadow: 0px 2px 7px 0px rgb(75, 75, 75);
+}
+
+.form {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(auto-fit, 20rem);
+  gap: 1rem;
+}
+
+.form__fieldset {
+  display: contents;
+}
+
+.account {
+  padding-block: 5rem;
+
+  display: grid;
+  grid: repeat(2, 1fr) / 1fr;
+}
+
+.account__anchor {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+
+  .form {
+    grid: repeat(7, 1fr) / 1fr;
+  }
+
+  .form__field {
+    justify-self: center;
+  }
 }
