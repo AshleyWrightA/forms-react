@@ -32,11 +32,31 @@
   display: contents;
 }
 
+.form__button {
+  height: 4rem;
+  width: 60%;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.form__error {
+  color: red;
+  font-size: 1.2rem;
+}
+
 .account {
   padding-block: 5rem;
 
   display: grid;
   grid: repeat(2, 1fr) / 1fr;
+}
+
+.account__button {
+  padding: 1rem;
+  width: 60%;
+
+  justify-self: center;
 }
 
 .account__anchor {

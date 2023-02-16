@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import formdata from "../data/form-data";
+import { FormLogic } from "../form-logic";
 
 export default function Content() {
+  useEffect(() => {
+    const x = new FormLogic();
+    x.setEventListeners();
+  }, []);
+
   return (
     <div className="content">
       <div className="content__text">
@@ -27,7 +34,7 @@ function Form() {
     <div className="container">
       <form className="form">
         <fieldset className="form__fieldset">{formArray}</fieldset>
-        <input type="submit" value="Submit" />
+        <input className="form__submit" type="submit" value="Submit" />
       </form>
     </div>
   );
@@ -35,9 +42,10 @@ function Form() {
 
 function Field(props) {
   return (
-    <label className="form__field" htmlFor={props.id}>
+    <label className="form__label" htmlFor={props.id}>
       <p>{props.text}</p>
-      <input type={props.type} id={props.id} required></input>
+      <input className={"form__input " + props.id} type={props.type} id={props.id}></input>
+      <p className="form__error"></p>
     </label>
   );
 }
@@ -45,7 +53,7 @@ function Field(props) {
 function Account() {
   return (
     <div className="account">
-      <button>Create Account</button>
+      <button className="account__button">Create Account</button>
       <div className="account__anchor">
         <p>Already have an account?</p>
         <a>Log In</a>

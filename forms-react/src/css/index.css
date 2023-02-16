@@ -17,6 +17,8 @@
 
   --dream-horizen: rgb(233, 188, 64);
   --background: rgb(255, 249, 196);
+  --button: rgb(255, 57, 31);
+  --buton-hover: rgb(206, 48, 0);
 }
 
 body {
@@ -29,12 +31,35 @@ body {
   font-size: 1.6rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 h1 {
   font-size: calc(3.6rem + 1.2vw);
+}
+
+h2 {
+  padding-top: 2rem;
+
+  font-size: 2.4rem;
+}
+
+button,
+input[type="submit"] {
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  border-radius: 1rem;
+  border-style: none;
+  background-color: var(--button);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--buton-hover);
+}
+
+button:active,
+input[type="submit"]:active {
+  background-color: var(--button);
 }
 
 /*  ReactDOM Root */
