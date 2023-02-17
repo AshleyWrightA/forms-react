@@ -28,16 +28,20 @@
   font-family: HVD-Bodedo, "Courier New", Courier, monospace;
 }
 
+.splash__credits {
+  color: white;
+}
+
 @media (max-width: 600px) {
   .splash {
-    height: 60vh;
+    height: 40vh;
     width: 100vw;
 
     display: flex;
     flex-direction: inherit;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     background-size: 1200px;
-    background-position: bottom -180px left 780px;
+    background-position: bottom -280px left 860px;
   }
 }

@@ -1,4 +1,8 @@
 .content {
+  height: 100vh;
+
+  padding-block: 8vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,13 +12,13 @@
 }
 
 .content__text {
-  padding-block: 5rem;
-  padding-inline: 8vw 2vw;
+  padding-block: 4vh 4vh;
+  padding-inline: 4vw 4vw;
 }
 
 .container {
   padding-block: 5rem;
-  padding-inline: 8vw 2vw;
+  padding-inline: 5vw 5vw;
 
   width: 60vw;
 
@@ -26,21 +30,29 @@
   display: grid;
   grid: repeat(3, 1fr) / repeat(auto-fit, 20rem);
   gap: 1rem;
+
+  justify-content: center;
+}
+
+.form__text {
+  padding-block: 0.5rem;
 }
 
 .form__fieldset {
   display: contents;
 }
 
-.form__button {
+.form__submit {
   height: 4rem;
-  width: 60%;
+  width: 10rem;
 
   justify-self: center;
   align-self: center;
 }
 
 .form__error {
+  height: 1.2rem;
+
   color: red;
   font-size: 1.2rem;
 }
@@ -65,12 +77,33 @@
 }
 
 @media (max-width: 600px) {
+  input {
+    width: 20rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account {
+    padding-block: 2rem;
+  }
+
   .container {
-    width: 100vw;
+    padding-block: 2vh;
+  }
+
+  .content__text {
+    padding: 1rem;
+
+    width: 40vh;
   }
 
   .form {
+    justify-items: center;
     grid: repeat(7, 1fr) / 1fr;
+    gap: 0px;
   }
 
   .form__field {

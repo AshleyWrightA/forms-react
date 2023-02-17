@@ -43,7 +43,7 @@ function Form() {
 function Field(props) {
   return (
     <label className="form__label" htmlFor={props.id}>
-      <p>{props.text}</p>
+      <p className="form__text">{props.text}</p>
       <input className={"form__input " + props.id} type={props.type} id={props.id}></input>
       <p className="form__error"></p>
     </label>

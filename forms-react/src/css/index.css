@@ -14,11 +14,20 @@
 
 :root {
   font-size: 62.5%;
+  height: 100vh;
 
   --dream-horizen: rgb(233, 188, 64);
   --background: rgb(255, 249, 196);
   --button: rgb(255, 57, 31);
   --buton-hover: rgb(206, 48, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
 }
 
 body {
