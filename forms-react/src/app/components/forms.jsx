@@ -54,9 +54,11 @@ function Account() {
   return (
     <div className="account">
       <button className="account__button">Create Account</button>
-      <div className="account__anchor">
+      <div className="account__container">
         <p>Already have an account?</p>
-        <a>Log In</a>
+        <a className="account__anchor" href="">
+          Log In
+        </a>
       </div>
     </div>
   );

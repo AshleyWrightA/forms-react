@@ -1,8 +1,6 @@
 .content {
   height: 100vh;
 
-  padding-block: 8vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,15 +10,15 @@
 }
 
 .content__text {
-  padding-block: 4vh 4vh;
-  padding-inline: 4vw 4vw;
+  padding-block: 2rem 2rem;
+  padding-inline: 2rem 2rem;
 }
 
 .container {
   padding-block: 5rem;
   padding-inline: 5vw 5vw;
 
-  width: 60vw;
+  width: 61vw;
 
   background-color: var(--dream-horizen);
   box-shadow: 0px 2px 7px 0px rgb(75, 75, 75);
@@ -51,14 +49,26 @@
 }
 
 .form__error {
+  padding: 0.3rem 0;
+
   height: 1.2rem;
 
   color: red;
   font-size: 1.2rem;
 }
 
+.form__input:invalid {
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+.valid {
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
 .account {
-  padding-block: 5rem;
+  padding-top: 5rem;
 
   display: grid;
   grid: repeat(2, 1fr) / 1fr;
@@ -71,9 +81,13 @@
   justify-self: center;
 }
 
-.account__anchor {
+.account__container {
   display: flex;
   gap: 1rem;
+}
+
+.account__anchor {
+  color: blue;
 }
 
 @media (max-width: 600px) {
@@ -82,6 +96,11 @@
   }
 
   .content {
+    padding-block: 4rem;
+    padding-inline: 0;
+
+    height: 100%;
+
     display: flex;
     flex-direction: column;
   }
@@ -96,8 +115,6 @@
 
   .content__text {
     padding: 1rem;
-
-    width: 40vh;
   }
 
   .form {

@@ -14,15 +14,14 @@ class FormLogic {
     formElements.forEach((e) => {
       e.addEventListener("blur", (e) => {
         e.preventDefault();
-        this.validateElement(e.target);
         if (e.target.type === "email") {
-          this.validateEmail();
-        }
-        if (e.target.id === "password") {
+          this.validateEmail(e.target);
+        } else if (e.target.id === "password") {
           this.validatePassword();
-        }
-        if (e.target.id === "confirm-password") {
+        } else if (e.target.id === "confirm-password") {
           this.validateConfirmPassword();
+        } else {
+          this.validateElement(e.target);
         }
       });
     });
@@ -59,8 +58,10 @@ class FormLogic {
     const inputControl = e.parentElement;
     const errorDisplay = inputControl.querySelector(".form__error");
 
+    e.required = true;
+    e.classList.remove("valid");
+
     errorDisplay.innerText = message;
-    errorDisplay.classList.remove("form__success");
   }
 
   setSuccess(e) {
@@ -68,13 +69,22 @@ class FormLogic {
     const errorDisplay = inputControl.querySelector(".form__error");
 
     errorDisplay.innerText = "";
-    errorDisplay.classList.add("form__success");
+    e.required = false;
+    e.classList.add("valid");
   }
 
   validateEmail(email) {
-    const re =
+    const emailValue = email.value.trim();
+    const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+
+    if (emailValue === "") {
+      this.setError(email, `${email.parentElement.firstChild.textContent} required`);
+    } else if (!regex.test(String(email.value).toLowerCase())) {
+      this.setError(this.email, "Invalid Email");
+    } else {
+      this.setSuccess(email);
+    }
   }
 }
 
