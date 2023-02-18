@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/forms-react/static/css/main.629284fd.css",
+    "main.js": "/forms-react/static/js/main.c8fc2aea.js",
+    "static/media/viva-luna.jpg": "/forms-react/static/media/viva-luna.3898d030a040cf6ede72.jpg",
+    "static/media/HVD_Bodedo-webfont.woff": "/forms-react/static/media/HVD_Bodedo-webfont.ca1c19f7f1cc3a0495dd.woff",
+    "index.html": "/forms-react/index.html",
+    "main.629284fd.css.map": "/forms-react/static/css/main.629284fd.css.map",
+    "main.c8fc2aea.js.map": "/forms-react/static/js/main.c8fc2aea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.629284fd.css",
+    "static/js/main.c8fc2aea.js"
+  ]
+}
